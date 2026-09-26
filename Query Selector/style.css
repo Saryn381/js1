@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#users {
+    margin-top: 20px;
+}
+
+.user {
+    background: white;
+    padding: 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-header h2 {
+    margin: 0;
+}
+
+.deleteBtn {
+    border: none;
+    background: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    color: darkred;
+    transform: scale(1.2);
+}

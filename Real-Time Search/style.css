@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+
+/* SEARCH PAGE */
+
+#searchPage {
+    text-align: center;
+}
+
+#searchPage h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 50px 16px 18px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    font-size: 16px;
+    background: white;
+    transition: 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #555;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.search-box span {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: #777;
+}
+
+#resultCount {
+    color: #777;
+    margin: 15px 0 25px;
+}
+
+
+/* PEOPLE CARDS */
+
+.people {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.person {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.person:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.person img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.person h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.person p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+    display: none;
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+}
+
+.no-results h2 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+/* PROFILE */
+
+#profilePage {
+    display: none;
+}
+
+.back-button {
+    border: none;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    transform: translateX(-4px);
+}
+
+
+/* PROFILE CARD */
+
+.profile {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    padding: 45px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.profile-name h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.profile-name p {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.profile-content {
+    padding: 35px;
+}
+
+.profile-section {
+    margin-bottom: 35px;
+}
+
+.profile-section h2 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.profile-section p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* PROFILE INFORMATION */
+
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.info-box {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 12px;
+}
+
+.info-box span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.info-box strong {
+    font-size: 15px;
+}
+
+
+/* INTERESTS */
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest {
+    background: #f0f0f0;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    #searchPage h1 {
+        font-size: 30px;
+    }
+
+    .profile-header {
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-header img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-name h1 {
+        font-size: 28px;
+    }
+
+    .profile-content {
+        padding: 25px 20px;
+    }
+
+    .profile-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- SEARCH PAGE -->
+        <section id="searchPage">
+
+            <h1>People</h1>
+            <p class="subtitle">Search and explore profiles</p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search person..."
+                    autocomplete="off"
+                >
+                <span>⌕</span>
+            </div>
+
+            <p id="resultCount"></p>
+
+            <div id="peopleContainer" class="people"></div>
+
+            <div id="noResults" class="no-results">
+                <h2>No results found</h2>
+                <p>Try searching for another name.</p>
+            </div>
+
+        </section>
+
+
+        <!-- PROFILE PAGE -->
+        <section id="profilePage">
+
+            <button id="backButton" class="back-button">
+                ← Back to People
+            </button>
+
+            <div class="profile">
+
+                <div class="profile-header">
+
+                    <img id="profileImage" src="" alt="Profile">
+
+                    <div class="profile-name">
+                        <h1 id="profileName"></h1>
+                        <p id="profileUsername"></p>
+                    </div>
+
+                </div>
+
+                <div class="profile-content">
+
+                    <div class="profile-section">
+                        <h2>About</h2>
+                        <p id="profileBio"></p>
+                    </div>
+
+                    <div class="profile-info">
+
+                        <div class="info-box">
+                            <span>Age</span>
+                            <strong id="profileAge"></strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Gender</span>
+                            <strong id="profileGender"></strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Location</span>
+                            <strong id="profileLocation"></strong>
+                        </div>
+
+                        <div class="info-box">
+                            <span>Occupation</span>
+                            <strong id="profileOccupation"></strong>
+                        </div>
+
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Interests</h2>
+                        <div id="profileInterests" class="interests"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
